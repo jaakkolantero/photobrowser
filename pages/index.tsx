@@ -19,10 +19,18 @@ export default () => {
 
       if (!photos) {
         //TODO: add skeleton for loading homepage
-        return <p>loading</p>;
+        return (
+          <p className="py-4 w-full flex justify-center text-gray-500 text-2xl">
+            loading
+          </p>
+        );
       }
 
-      return photos.map((photo) => <Item photo={photo} />);
+      return photos.map((photo) => (
+        <div className="m-2">
+          <Item photo={photo} />
+        </div>
+      ));
     },
 
     // one page's SWR => offset of next page
@@ -36,15 +44,13 @@ export default () => {
   );
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <div className="flex-1 pt-12 pb-24 px-10 bg-gray-100">
+    <div className="flex min-h-screen flex-col items-center bg-gray-100">
+      <div className="max-w-6xl w-full flex-1 pt-12 pb-24 px-10">
         <h1 className="text-4xl font-bold text-gray-500 flex justify-center mb-4">
           photobrowser
         </h1>
         <hr className="mb-2" />
-        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3">
-          {pages}
-        </div>
+        <div className="mb-4 flex flex-wrap justify-around">{pages}</div>
         <div className="flex justify-center">
           <button
             className="antialiased py-2 px-4 bg-black text-white rounded shadow transition duration-200 ease-in-out hover:bg-gray-900 transform hover:scale-110"
@@ -60,7 +66,7 @@ export default () => {
           </button>
         </div>
       </div>
-      <div className="bg-black text-white py-12 px-10 flex justify-center">
+      <div className="w-full bg-black text-white py-12 px-10 flex justify-center">
         <a
           className="text-blue-400 hover:text-blue-600"
           href="https://github.com/jaakkolantero"
