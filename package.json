@@ -10,18 +10,20 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "next": "^9.3.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "swr": "^0.2.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "@types/node": "^13.9.0",
-    "@types/react": "^16.9.23",
-    "cz-conventional-changelog": "^3.1.0",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "cz-conventional-changelog": "^3.2.0",
     "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.2.0",
-    "typescript": "^3.8.3"
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.5"
   },
   "config": {
     "commitizen": {
