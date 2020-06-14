@@ -2,7 +2,6 @@ import fetch from "isomorphic-unfetch";
 
 export default async function handler(req, res) {
   const offset = parseInt(req.query.offset ?? 0);
-  console.log("offset", offset);
 
   const allPhotos = await fetch(
     "https://jsonplaceholder.typicode.com/photos"
