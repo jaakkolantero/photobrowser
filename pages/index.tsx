@@ -1,5 +1,6 @@
 import fetch from "../lib/fetch";
 import useSWR, { useSWRPages } from "swr";
+import Item from "../components/item";
 
 //TODO: add dialog for single photo
 
@@ -21,20 +22,7 @@ export default () => {
         return <p>loading</p>;
       }
 
-      return photos.map((photo) => (
-        <div>
-          <p>
-            {photo.title} - {photo.id}
-          </p>
-          <img
-            className="w-150 h-150"
-            key={photo.id}
-            src={photo.thumbnailUrl}
-            loading="lazy"
-            alt={photo.title}
-          />
-        </div>
-      ));
+      return photos.map((photo) => <Item photo={photo} />);
     },
 
     // one page's SWR => offset of next page
@@ -54,7 +42,7 @@ export default () => {
           photobrowser
         </h1>
         <hr className="mb-2" />
-        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+        <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3">
           {pages}
         </div>
         <div className="flex justify-center">
