@@ -2,6 +2,8 @@
 
 # photobrowser - [https://photobrowser.vercel.app/](https://photobrowser.vercel.app/)
 
+![screenshot](https://github.com/jaakkolantero/photobrowser/blob/master/screenshot.png)
+
 Photobrowser to create grid view of photos with pagination. Created with **Next.js**, **TailwindCSS** and **Swr**. Running on serverless architecture with immutable deployments.
 
 Load of cool stuff inside like tailwind-easing-gradients for smooth gradient overlays.
