@@ -22,7 +22,7 @@ endpoint for photos [photos.ts](/pages/api/photos.ts)
 
 endpoint for single photo [photo.ts](/pages/api/photo.ts)
 
-Previous [deployments](/deployments)
+Previous [deployments](https://github.com/jaakkolantero/photobrowser/deployments)
 
 ## Installation / Running locally
 
