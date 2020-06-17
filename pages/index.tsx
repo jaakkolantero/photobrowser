@@ -2,8 +2,6 @@ import fetch from "../lib/fetch";
 import useSWR, { useSWRPages } from "swr";
 import Item from "../components/item";
 
-//TODO: add dialog for single photo
-
 export default () => {
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useSWRPages(
     // page key
@@ -18,7 +16,6 @@ export default () => {
       // you can still use other SWRs outside
 
       if (!photos) {
-        //TODO: add skeleton for loading homepage
         return (
           <p className="py-4 w-full flex justify-center text-gray-500 text-2xl">
             loading
