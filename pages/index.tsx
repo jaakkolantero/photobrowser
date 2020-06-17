@@ -1,6 +1,10 @@
 import fetch from "../lib/fetch";
 import useSWR, { useSWRPages } from "swr";
 import Item from "../components/item";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import Layout from "../components/layout";
+import Content from "../components/content";
 
 export default () => {
   const { pages, isLoadingMore, isReachingEnd, loadMore } = useSWRPages(
@@ -41,12 +45,9 @@ export default () => {
   );
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-gray-100">
-      <div className="max-w-6xl w-full flex-1 pt-12 pb-24 px-10">
-        <h1 className="text-4xl font-bold text-gray-500 flex justify-center mb-4">
-          photobrowser
-        </h1>
-        <hr className="mb-2" />
+    <Layout>
+      <Header />
+      <Content>
         <div className="mb-4 flex flex-wrap justify-around">{pages}</div>
         <div className="flex justify-center">
           <button
@@ -55,22 +56,14 @@ export default () => {
             disabled={isReachingEnd || isLoadingMore}
           >
             {isLoadingMore
-              ? //TODO: add lottie loading animation
-                "loading more"
+              ? "loading more"
               : isReachingEnd
               ? "no more data"
               : "load more"}
           </button>
         </div>
-      </div>
-      <div className="w-full bg-black text-white py-12 px-10 flex justify-center">
-        <a
-          className="text-blue-400 hover:text-blue-600"
-          href="https://github.com/jaakkolantero"
-        >
-          @jaakkolantero
-        </a>
-      </div>
-    </div>
+      </Content>
+      <Footer />
+    </Layout>
   );
 };
