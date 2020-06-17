@@ -2,13 +2,25 @@
 
 # photobrowser - [https://photobrowser.vercel.app/](https://photobrowser.vercel.app/)
 
-Photobrowser to create grid view of photos. Created with **Next.js** **TailwindCSS** and **Swr**. Running on serverless architecture.
+Photobrowser to create grid view of photos with pagination. Created with **Next.js**, **TailwindCSS** and **Swr**. Running on serverless architecture.
 
 ## Prerequisites
 
 Before you continue, ensure you have npm installed. Tested on linux.
 
-## Installation
+## Tour
+
+Grid view [index.tsx](/pages/index.tsx)
+
+Single photo [[id].tsx](/pages/[id].tsx)
+
+Components [/components](/components)
+
+endpoint for photos [photos.ts](/pages/api/photos.ts)
+
+endpoint for single photo [photo.ts](/pages/api/photo.ts)
+
+## Installation / Running locally
 
 ```bash
 git clone https://github.com/jaakkolantero/photobrowser.git
