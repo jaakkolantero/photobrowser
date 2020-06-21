@@ -31,15 +31,19 @@ const Item = () => {
               back
             </a>
           </Link>
-          <h2 className="text-4xl text-gray-800 uppercase">{photo.title}</h2>
+          <h2 className="text-xl md:text-4xl text-gray-800 uppercase">
+            {photo.title}
+          </h2>
           <hr className="my-4" />
-          <img
-            className="shadow-lg w-600 h-600"
-            key={photo.id}
-            src={photo.url}
-            loading="lazy"
-            alt={photo.title}
-          />
+          <div className="w-full flex justify-center">
+            <img
+              className="shadow-lg max-w-full h-auto"
+              key={photo.id}
+              src={photo.url}
+              loading="lazy"
+              alt={photo.title}
+            />
+          </div>
         </Content>
         <Footer />
       </Layout>
