@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const offset = parseInt(req.query.offset ?? 0);
 
   const allPhotos = await fetch(
-    "https://jsonplaceholder.typicode.com/photos"
+    `${process.env.BASE_URL}/api/cache/photos`
   ).then((response) => response.json());
 
   const photoPage = allPhotos.slice(offset, offset + 12);

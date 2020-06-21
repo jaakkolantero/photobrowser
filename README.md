@@ -32,6 +32,7 @@ Previous [deployments](https://github.com/jaakkolantero/photobrowser/deployments
 git clone https://github.com/jaakkolantero/photobrowser.git
 cd photobrowser
 npm install
+rename .example.env.local to .env.local
 npm run dev
 ```
 
